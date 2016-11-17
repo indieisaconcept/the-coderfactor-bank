@@ -1,0 +1,50 @@
+{
+  "name": "the-coderfactory-bank",
+  "main": "./index.js",
+  "version": "1.0.0",
+  "description": "Example express application with basic middleware testing",
+  "author": "indieisaconcept <me@indieisaconcept.com>",
+  "scripts": {
+    "start": "node index",
+    "clean": "trash coverage .nyc_output",
+    "test": "ava --verbose",
+    "pretest": "npm run clean && npm run lint",
+    "lint": "eslint ./bin ./index.js ./lib ./test",
+    "cover": "nyc ava",
+    "precover": "npm run pretest",
+    "postcover": "nyc report --reporter=html"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "eslint": "^3.10.2",
+    "eslint-config-semistandard": "^7.0.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.3.2",
+    "eslint-plugin-react": "^6.7.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "nyc": "^9.0.1",
+    "supertest": "^2.0.1",
+    "supertest-as-promised": "^4.0.1",
+    "trash-cli": "^1.4.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indieisaconcept/the-coderfactor-bank.git"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "testing"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indieisaconcept/the-coderfactor-bank/issues"
+  },
+  "homepage": "https://github.com/indieisaconcept/the-coderfactor-bank#readme"
+}
